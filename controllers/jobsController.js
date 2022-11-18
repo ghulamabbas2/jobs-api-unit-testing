@@ -32,7 +32,7 @@ export const newJob = async (req, res) => {
 
     const job = await Job.create(req.body);
 
-    res.status(200).json({
+    res.status(201).json({
       job,
     });
   } catch (error) {
@@ -79,7 +79,7 @@ export const updateJob = async (req, res) => {
 
   // Check if the user is owner
   if (job.user.toString() !== req.user.id) {
-    return res.status(401).json({
+    return res.status(403).json({
       error: "You are not allowed to update this job",
     });
   }
