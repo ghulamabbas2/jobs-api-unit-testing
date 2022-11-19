@@ -6,7 +6,8 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
