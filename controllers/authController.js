@@ -80,6 +80,7 @@ export const loginUser = async (req, res, next) => {
 
 export const uploadImage = async (req, res) => {
   const s3Service = new S3Service();
+  console.log(req.files.image);
   const response = await s3Service.upload(req.files.image);
 
   res.status(200).json({
