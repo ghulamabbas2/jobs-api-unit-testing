@@ -134,7 +134,7 @@ describe("Login User", () => {
     });
   });
 
-  it("should throw Invalid password error", async () => {
+  it("should login user", async () => {
     jest.spyOn(User, "findOne").mockImplementationOnce(() => ({
       select: jest.fn().mockResolvedValueOnce(mockUser),
     }));
